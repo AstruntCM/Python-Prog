@@ -12,6 +12,9 @@ randint(10, 20)
 # Egy csomagból mindent importálni akarsz
 from random import *
 
+import numpy as np
+
+
 #----------------------------------------------------------------
 
 # Datetime
