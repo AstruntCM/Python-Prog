@@ -41,9 +41,9 @@ def gcd(a, b):
 
 # Lambda Kifejezés
 
-f = lambda x: x + 2
+ft = lambda x: x + 2
 
-f(10) # --> O: 12
+ft(10) # --> O: 12
 
 pairs = [('alma', 30), ('körte', 10), ('barack', 20)]
 sorted(pairs, key = lambda x: x[1])
@@ -55,6 +55,7 @@ sorted(freq, key = lambda x: -freq[x])
 
 # Premier League
 
+"""
 games = []
 
 ft = open('pre.txt')
@@ -75,3 +76,18 @@ for sor in ft:
 ft.close()
 
 print(games)
+"""
+games = []
+f = open('pl.txt')
+for i in range(6): # első 6 sor átugrása
+    f.readline()
+for line in f: # további sorok feldolgozása
+    tok = line.split('\t')
+    games.append({
+        'round': int(tok[0]),
+        'hteam': tok[1],
+        'ateam': tok[2],
+        'hgoals': int(tok[3]),
+        'agoals': int(tok[4])
+    })
+f.close()
