@@ -57,7 +57,7 @@ sorted(freq, key = lambda x: -freq[x])
 
 games = []
 
-ft = open('premierl.txt')
+ft = open('pre.txt')
 
 for i in range(6):
     ft.readline()
